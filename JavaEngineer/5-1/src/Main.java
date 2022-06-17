@@ -63,9 +63,6 @@ public class Main {
 			    list.add(arrayDate[1]);
 			    list.add(arrayDate[2]);
 			    
-//				cal.get(Calendar.YEAR);
-//				cal.get((Calendar.MONTH) + 1);
-//				cal.get(Calendar.DATE);
 				
 				// 問⑨上記で格納した要素を繰り返しで出力しましょう。拡張for文
 				// <以下記述>
