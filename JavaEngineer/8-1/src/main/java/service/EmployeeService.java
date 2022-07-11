@@ -35,7 +35,7 @@ public class EmployeeService {
  
   // 問③ 入力されたIDとPassWordをキーにして、検索するSELECT文
  /** ・SQL SELECT文 */
- private static final String SQL_SELECT = "select * from employee_table where id = '?' AND password = '?'";
+ private static final String SQL_SELECT = "select * from employee_table where id = ? AND password = ?";
  
  EmployeeBean employeeDate = null;
  
@@ -118,6 +118,7 @@ public class EmployeeService {
  employeeDate.setComment(tmpComment);
  employeeDate.setLogin_Time(tmpLoginTime);
  }
+ 
  
   // forName()で例外発生
  } catch (ClassNotFoundException e) {
