@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!---スタイルタグ読み込む--->
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onclick="colorchage()"></div>
+
+        <!---scriptタグ読み込む--->
+    <script>
+        function colorchage(){
+            document.getElementById('box').style.backgroundColor ='red';
+        }
+    </script>
+</body>
+</html>
