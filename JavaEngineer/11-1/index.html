@@ -17,13 +17,13 @@
     </style>
 </head>
 <body>
-    <select onchange="changeLang()">
+    <select id="select_event" onchange="changeLang()">
         <option id="select">選択してください</option>
         <option id="selected_jpn">日本語</option>
         <option id="selected_en">English</option>
         <option id="selected_all">全て表示</option>
     </select>
-    <table id="alltext">
+    <table>
         <tr id="japan">
             <th>日本</th>
             <td>こんにちは</td>
@@ -40,20 +40,25 @@
 
     <script>
         //①onchangeで使用されている関数の中身を実装してください。
-      
+   
+        let select = document.getElementById('select_event');
+        let japan = document.getElementById('japan');
+        let english = document.getElementById('english');
+
         function changeLang(){
-            
-            let jap = document.getElementById('selected_jpn');
-            let eg = document.getElementById('selected_eg');
-            let japan = document.getElementById('japan');
-            let english = document.getElementById('english');
-
-            jap.addEventListener('change', function(){
-                japan.style.display ='block';
-                english.style.display ='none';
-            }.false);
-
-        }
+            if(select.value === '日本語'){
+                japan.style.display = 'block';
+                english.style.display = 'none';
+            }
+            else if(select.value ==='English'){
+                japan.style.display = 'none';
+                english.style.display = 'block';
+            }
+            else{
+                japan.style.display = 'block';
+                english.style.display = 'block';
+            }
+         }
     </script>
 </body>
 </html>
